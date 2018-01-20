@@ -5,7 +5,6 @@ NUM_LINES=$(echo "LINE" | wc -l)
 if [[ "$NUM_LINES" != 1 ]]; then
   echo "Found more than one result: "
   echo "$LINE"
-  exit
 fi
 if [ "$LINE" ]; then
 LINE=$(echo "$LINE" | awk '{ print $1 }' | sed 's@:@@')
